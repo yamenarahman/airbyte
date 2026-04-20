@@ -492,7 +492,7 @@ jobs:
 
       - name: Notify Slack on connector publish success
         if: success() && needs.publish_options.outputs.dry-run != 'true' && steps.success-context.outcome == 'success'
-        uses: slackapi/slack-github-action@70cd7be8e40a46e8b0eced40b0de447bdb42f68e # v1.26.0
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
         with:
           payload: |
             {
@@ -590,7 +590,7 @@ jobs:
           echo "connector-text=$CONNECTOR_TEXT" >> $GITHUB_OUTPUT
       - name: Send publish failures to connector-publish-failures channel
         id: slack
-        uses: slackapi/slack-github-action@70cd7be8e40a46e8b0eced40b0de447bdb42f68e # v1.26.0
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
         with:
           # This data can be any valid JSON from a previous step in the GitHub Action
           payload: |

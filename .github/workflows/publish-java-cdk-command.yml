@@ -178,7 +178,7 @@ jobs:
 
       - name: "Post failure to Slack channel"
         if: ${{ env.DRY_RUN == 'false' && failure() }}
-        uses: slackapi/slack-github-action@007b2c3c751a190b6f0f040e47ed024deaa72844 # v1.23.0
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
         continue-on-error: true
         with:
           channel-id: C07K1P3UL6Q # The `#dev-java-cdk-releases` channel
@@ -207,7 +207,7 @@ jobs:
 
       - name: "Post success to Slack channel"
         if: ${{ env.DRY_RUN == 'false' && !failure() }}
-        uses: slackapi/slack-github-action@007b2c3c751a190b6f0f040e47ed024deaa72844 # v1.23.0
+        uses: slackapi/slack-github-action@af78098f536edbc4de71162a307590698245be95 # v3.0.1
         continue-on-error: true
         with:
           channel-id: C07K1P3UL6Q # The `#dev-java-cdk-releases` channel
